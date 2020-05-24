@@ -30,14 +30,13 @@ def posts_list(request):
         data = JSONParser().parse(request)
         try:
             title = data["title"]
-            creating = data["creating"]
             author_name = data["author_name"]
-            author = User.objects.get(username=authoer_name)
+            author = User.objects.get(username=author_name)
             updated_on = data['updated_on']
             content = data["content"]
             created_on = data['created_on']
             status = data['status']
-            p = Post(title=tile, author=author, updated_on=updated_on, content=content, created_on=created_on,status=status)
+            p = Post(title=title, author=author, updated_on=updated_on, content=content, created_on=created_on,status=status)
             p.save()
             result = {"result":"created post successfully !"}
             return Response(result, status=200)
