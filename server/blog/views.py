@@ -26,7 +26,7 @@ def posts_list(request):
         # print(posts)
         ser = PostSer(posts, many=True)
         # print(ser.data)
-        return JSONParser(ser.data)
+        return Response(data=ser.data, status=200)
 
     elif request.method == "POST":
         data = JSONParser().parse(request)
