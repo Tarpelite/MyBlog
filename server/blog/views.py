@@ -53,9 +53,10 @@ def get_post(request):
         _id = int(data["id"])
         try:
             p = Post.objects.get(pk=_id)
+
             result = {
-                "title":p.title,
-                "content": p.content,
+                "title": str(p.title),
+                "content": str(p.content),
                 "updated_on":str(p.updated_on),
                 "read_time":str(p.read_time)
             }
