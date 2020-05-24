@@ -53,7 +53,7 @@ def get_post(request):
         _id = int(data["id"])
         try:
             p = Post.objects.get(pk=_id)
-
+            print(p)
             result = {
                 "title": str(p.title),
                 "content": str(p.content),
