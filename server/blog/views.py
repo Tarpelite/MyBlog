@@ -11,7 +11,7 @@ from rest_framework.pagination import PageNumberPagination
 class PostSer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = ["id", "title", 'author', 'updated_on', 'content', 'created_on', 'status']
+        fields = ["id", "title", 'updated_on', 'introduction', 'read_time', ]
 
 
 class StandardResultsSetPagination(PageNumberPagination):
