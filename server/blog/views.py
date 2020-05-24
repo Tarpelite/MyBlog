@@ -50,7 +50,7 @@ def posts_list(request):
 def get_post(request):
     if request.method == "POST":
         data = request.data
-        _id = data["id"]
+        _id = int(data["id"])
         try:
             p = Post.object.get(pk=_id)
             result = {
