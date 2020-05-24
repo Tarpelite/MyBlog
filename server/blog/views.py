@@ -25,6 +25,7 @@ def posts_list(request):
         posts = Post.objects.all()
         print(posts)
         ser = PostSer(posts, many=True)
+        print(ser.data)
         return JSONParser(ser.data, safe=False)
 
     elif request.method == "POST":
