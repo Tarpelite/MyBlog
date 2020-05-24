@@ -56,8 +56,8 @@ def get_post(request):
             result = {
                 "title":p.title,
                 "content": p.content,
-                "updated_on":updated_on,
-                "read_time":read_time
+                "updated_on":str(p.updated_on),
+                "read_time":str(p.read_time)
             }
             return Response(result, status=200)
 
