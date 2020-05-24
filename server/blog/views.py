@@ -23,6 +23,7 @@ class StandardResultsSetPagination(PageNumberPagination):
 def posts_list(request):
     if request.method == "GET":
         posts = Post.objects.all()
+        print(posts)
         ser = PostSer(posts, many=True)
         return JSONParser(ser.data, safe=False)
 
