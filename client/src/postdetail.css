@@ -1,0 +1,27 @@
+.post{
+    margin-top: 50 px;
+}
+
+h1 {
+    font-family: '黑体';
+    color: hotpink; 
+    font-weight: 500;
+}
+
+.datetime{
+    margin-top: 10px;
+    font-style: oblique;
+    color: gray;
+    font-size: small;
+}
+
+.para{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: lightslategray;
+    font-size: smaller;
+    line-height: 2.5em;
+    text-indent: 2em;
+    word-break: break-all;
+    white-space: pre-line;
+}
+
