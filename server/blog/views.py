@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import *
 from django.contrib.auth.models import User
-from rest_framework import status, serializers, 
+from rest_framework import status, serializers
 from rest_framework.parsers import JSONParser
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -37,7 +37,7 @@ def posts_list(request):
             content = data["content"]
             created_on = data['created_on']
             status = data['status']
-            p = Post(title=tile, author=author, updated_on=updated_on, content=content, created_on=created_on, content=content, status=status)
+            p = Post(title=tile, author=author, updated_on=updated_on, content=content, created_on=created_on,status=status)
             p.save()
             result = {"result":"created post successfully !"}
             return Response(result, status=200)
