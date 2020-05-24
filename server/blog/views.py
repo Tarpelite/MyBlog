@@ -62,6 +62,7 @@ def get_post(request):
             return Response(result, status=200)
 
         except Exception as e:
+            print(e)
             return Response({"result":"Not Found"}, status=404)
 
 
